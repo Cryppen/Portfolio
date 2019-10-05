@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>TRUN Compiler</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+					</header>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Booking System</h2>
+								<p style="text-align:left;">
+									<span style="float:right;">
+										<a href="https://github.com/Zirke/BookingZoo">View on Github<i class="icon brands fa-github"></i></a>
+										<a href="/pdf/sw305e18.pdf" download>Download PDF</a>
+								</span>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h2 class="major">Automating the Booking Process at Aalborg Zoo </h2>
+									<p><span class="image right"><img src="images/promptscreen.PNG"  /></span>	</p>
+									<p>
+									<h1>Abstract</h1>	
+									The communication management at Aalborg Zoo experience manually handling large amounts of data to be a reoccurring issue in their booking process for arrangements  and  lectures.   Therefore,  they  requested a system,  which  could  structure  and  automate  the booking process in a user-friendly manner to achieve a greater overview and reduce inconsistencies. For  the  system,  a  list  of  requirements  was  agreed upon  in  cooperation  with  the  communication  management. To  pursue  the  Object  Oriented  Analysis and Design  standard,  the system  was developed  using the Iterative model.  The initial analyses focuses on the Problem Domain and Application Domain, which elaborates  on  the  way  the  booking  process  is  currently handled at the Zoo and afterwards determines the  required  functionality  of  the  new  system.   This is  followed  by  an  elaboration  on  the  Architecture-and Component design that provided guidance in the later implementation of the booking system. To test the quality of the system and as a part of the Iterative model, three usability tests have been conducted to  evaluate  on  the  functionality  and  the  usability  of the system.  The system has thereafter been adjusted or  expanded  by  additional  requirements  to  achieve the most optimal booking system for the Zoo. By fulfilling  the  requirements  from  the  initial  system  definition and the additional requirements from usability tests, the system is concluded as appropriate to solve the issue at Aalborg Zoo.
+								</p>
+								<p>On an important note; While the software solution was tailored for their needs, the project was never used at Aalborg Zoo. </p>
+
+									<h3 class="major">My Contributions</h3>
+									<p>Since the project is a 7 person collaboration I feel it's fair to outline my contributions to the project. My major role in the implementation was regarding the communication between the google calendar API with OAuth2 login and confirmations. The system had to update their calendars around the office with change of arrangements and events. Besides the google calendar implementation my focus was also on the application and the search function of the bookings. In the application I did some of the statistics work of the applications creating graphs over bookings to track progress. 
+									
+									<h1>Creating an event in a google calendar</h1>
+									<pre><code>
+<font color="#ff8811">public</font> <font color="#ff8811">static</font> Event <font color="#ffff99">newArrangementEvent</font>(Booking inputArrangementBooking) {
+	Event arrangement_event = <font color="#ff8811">new</font> Event()
+		.setSummary(<font color="#2d862d">"Fødselsdagsbarn: "</font> + ((ArrangementBooking) inputArrangementBooking).getBirthdayChildName())
+		.setDescription(descriptionBuilderArrangement(inputArrangementBooking, commentBookingCustomerChecker(inputArrangementBooking), commentBookingChecker(inputArrangementBooking)))
+		.setTransparency(<font color="#2d862d">"transparent"</font>)
+		.setLocation(String.valueOf(((ArrangementBooking) inputArrangementBooking).getRestaurant().getType().toString()))
+		.setColorId(<font color="#2d862d">"5"</font>) <font color="#808080">// Yellow</font>	
+		.setSequence(<font color="#4db8ff">1</font>) 
+		.setId(idChecker(inputArrangementBooking))<font color="#ff8811">;</font>
+									
+	arrangement_event.setStart(startOfEvent(inputArrangementBooking))<font color="#ff8811">;</font>
+	arrangement_event.setEnd(endOfArrangementEvent(inputArrangementBooking))<font color="#ff8811">;</font>
+									
+	<font color="#ff8811">return</font> arrangement_event<font color="#ff8811">;</font>
+										}
+}</code></pre>
+										
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>If you have any question or want to get in contact with me the information is below
+							</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Niels Ebbesens Gade, 1, 21<br />
+									Aalborg 9000
+								</li>
+								<li class="icon solid fa-envelope"><a href="#">ch17@student.aau.dk</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/Cryppen">Github</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/christoffer-hansen-24741718a/">LinkedIn</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

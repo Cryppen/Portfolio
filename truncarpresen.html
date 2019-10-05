@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="index.html">Home</a></h1>
 					</header>
 
 				<!-- Wrapper -->
@@ -27,7 +27,11 @@
 						<header>
 							<div class="inner">
 								<h2>TRUN Compiler</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+								<p style="text-align:left;">
+									<span style="float:right;">
+										<a href="https://github.com/Zirke/CFG/">View on Github<i class="icon brands fa-github"></i></a>
+										<a href="/pdf/sw414f19.pdf" download>Download PDF</a>
+								</span>
 							</div>
 						</header>
 
@@ -35,14 +39,42 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+									<h2 class="major">An Arduino Programming Language for Primary School Students</h2>
+									<p><span class="image right"><img src="images/truncar.png"  /></span>	</p>
+									<p>
+									<h1>Abstract</h1>	
+									The purpose of this project was to design a new programming language suitable for teaching 7-9th grade
+											students to learn programming through physical visualisation. The visualisation used for the programming language is an Arduino car constructed of
+											LEGO. The designed language has statements for
+											driving and turning the car.
+											A syntactical specification is given using a CFG and
+											a semantic specification is given using structural operational semantic. For the programming language,
+											a working compiler is implemented in Java using
+											ANTLR for constructing the lexer and parser part of
+											the compiler. The compiler translates to C code.
+											A usability test was conducted to evaluate the ease of
+											the new programming language compared to the existing language for Arduino. The language is found
+											to be more user friendly compared to the existing Arduino language.
+										</p>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+									<h3 class="major">My Contributions</h3>
+									<p>Since the project is a 6 person collaboration I feel it's fair to outline my contributions to the project. 
+										The major aspect of the project I was in charge of was the implementation of the semantic and type checking constraints of the language.
+									This involved implementating a symmbol table and its associated visitor. With the implementation of semantic and type checking rules good and understandable error messages were also some of my focus points.</p>
 
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-
+									While the example below is by no means the most advanced implemented in the project, it highlights the simplicity and correspondance between documentation, design and implementation.
+									
+									<h1>Type Rule</h1>
+									<p><img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\LARGE&space;\frac{{E&space;\vdash&space;e_1&space;:&space;\textbf{N'}\;\;\;\;E&space;\vdash&space;e_2&space;:&space;\textbf{N}}}{{E&space;\vdash&space;e_1&space;<&space;e_2&space;:&space;\textbf{truth}&space;}}" title="\LARGE \frac{{E \vdash e_1 : \textbf{N'}\;\;\;\;E \vdash e_2 : \textbf{N}}}{{E \vdash e_1 < e_2 : \textbf{truth} }}" /></p>
+									<pre><code>// Less-than can be performed on ints and floats, returns as a truth literal									
+<font color="#ffff00">@Override</font> 
+<font color="#ff8811">public</font> Object <font color="#ffff99">visit</font>(LessThan node) <font color="#ff8811">throws</font> NoSuchMethodException {
+	Value leftValue = (Value) visit(node.getLhs())<font color="#ff8811">;</font>
+	Value rightValue = (Value) visit(node.getRhs())<font color="#ff8811">;</font>
+									
+	<font color="#ff8811">return</font> evaluateTruth(node, leftValue, rightValue)<font color="#ff8811">;</font>
+}</code></pre>
+										
 									<section class="features">
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
@@ -67,7 +99,8 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<p>If you have any question or want to get in contact with me the information is below
+							</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
