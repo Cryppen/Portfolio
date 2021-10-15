@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DFTP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+					</header>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>File Protocols</h2>
+								<p style="text-align:left;">
+									<span style="float:right;">
+										<a href="https://github.com/mathiasandresen/aau-p7-project">View on Github<i class="icon brands fa-github"></i></a>
+										<a href="/pdf/P7.pdf" download>Download PDF</a>
+								</span>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h2 class="major">The Delta File Transfer Protocal</h2>
+
+									<p><span class="image right"><img src="images/p7inner.png"  /></span>	</p>
+									<p>
+									<h1>Abstract</h1>	
+									Motivated by the UN’s sustainable development goals and
+a lack of user transparency in cloud storage, we analyze
+how we can improve a person’s digital storage of private
+data beyond cloud storage solutions. We present an analysis
+on how synchronizing files between a person’s devices
+can be done by utilizing their unused storage. We
+believe this can have positive effects regarding how electricity
+usage and hardware production influence the environment.
+We present our design of a distributed filesharing
+system for local networks, which is implemented
+as a fully-fledged Windows application. We use Node.js
+and its extensive selection of packages to implement the
+application and utilize a difference-algorithm to calculate
+the delta between two versions of a file. We conduct tests
+of the system’s features, states, and performance. In our
+use-case specific performance test, using three devices, we
+outperform Dropbox by ~0.34 seconds and Google Drive
+by ~8.68 seconds but perform worse than Dropbox with
+LAN sync by ~0.22 seconds. We conclude with a summarizing
+view of our system: The system provides a way
+to utilize unused storage resources by letting a user synchronize
+files between their own devices, instead of using
+a cloud-storage solution. Within our use case, it performs
+well compared to the aforementioned commercial
+systems, but lacks the extra functionality and consistency
+that they provide.
+										</p>
+
+									<h3 class="major">My Contributions</h3>
+									<p>The project was a collaboration between 5 people, therefore, I have decided to outline some features I worked on. My task on this project was interacting with the file OS of different devices and creating algorithms that could find differences between files and update them accordingly. In part with this task I had to create the minimum set of instructions when sending messages across the network to optimize for efficiency.  
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>			
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Niels Ebbesens Gade, 1, 21<br />
+									Aalborg 9000
+								</li>
+								<li class="icon solid fa-envelope"><a href="#">ch17@student.aau.dk</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/Cryppen">Github</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/christoffer-hansen-24741718a/">LinkedIn</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

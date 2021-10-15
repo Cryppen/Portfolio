@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Map Matching</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+					</header>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Map Matching</h2>
+								<p style="text-align:left;">
+									<span style="float:right;">
+										<a href="/pdf/P6.pdf" download>Download PDF</a>
+								</span>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h2 class="major">Trajectory Analysis and Road
+Network Prediction on aSTEP</h2>
+
+									<p><span class="image right"><img src="images/lastchristmas.png"  /></span>	</p>
+									<p>
+									<h1>Abstract</h1>	
+									We develop a Map Matching service and an Attribute Prediction
+service for the collaborative multi-project, aSTEP.
+These two solutions are a part of the spatial and spatiotemporal
+components. To perform map matching, we investigate
+different techniques. We choose GraphHopper’s
+Routing Engine, which employs a Hidden Markov Model.
+To adjust the performance of map matching, we have experimented
+with the Error-sigma and transition probability-b.
+We end up with 43 as the Error-sigma and 2 as the transition
+probability-beta. Due to the lack ground truth data for the
+map matching task, our experiments are evaluated based
+on our expectation of a given trajectory.
+For the Attribute Prediction service, we develop two
+micro-services. The Graph Attribute micro-service, which
+is responsible for interacting with end-users and fetching
+graphs from the database. The Attribute Prediction
+micro-service has the responsibility of predicting speed
+limit of any road network. We investigate different graph
+embedding and prediction algorithms and conclude that
+node2vec and relational fusion networks will be the main
+techniques. We utilise node2vec to embed the input graph
+and on the dual graph to get node and edge attributes. We
+also use the angle between the edges as our between-edge
+attributes. With these attributes, we train the network and
+model with a training loss at 115.68, validation loss at
+155.38, and a test loss at 164.35. This model is inadequate
+for optimally predicting speed limits on road networks.
+In conclusion, we have developed working micro-services
+for map matching and missing attributes prediction on
+road networks. We have implemented the functionality
+for further training of models.
+										</p>
+
+									<h3 class="major">My Contributions</h3>
+									<p>The project was a collaboration between 5 people, therefore, I have decided to outline some features I worked on. My focus was placed on performing the map matching part of the project, including implementing a Hidden Markov Model on the aSTEP toolchain. Creating a UI for the implementation and testing its intergration with other system. I also worked on implementing a Relational Fusion Network, which is an experimental neural network architecture to encapture road network relations. As part of this project I also worked with node2vec, graph2vec and worked as the group represententive for collaboration on aSTEP.
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>			
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Niels Ebbesens Gade, 1, 21<br />
+									Aalborg 9000
+								</li>
+								<li class="icon solid fa-envelope"><a href="#">ch17@student.aau.dk</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/Cryppen">Github</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/christoffer-hansen-24741718a/">LinkedIn</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
