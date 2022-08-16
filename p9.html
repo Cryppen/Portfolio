@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Data Augmentation Methods for Indoor Localization using RSSI Fingerprinting</title>
+		<title>Automatic Label Creation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,11 +26,11 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Data Augmentation Methods</h2>
+								<h2>Automatic Label Creation</h2>
 								<p style="text-align:left;">
 									<span style="float:right;">
-										<a href="https://github.com/sw808e21/indoor-location-navigation">View on Github<i class="icon brands fa-github"></i></a>
-										<a href="/pdf/P8.pdf" download>Download PDF</a>
+										<a href="https://github.com/P9-MI-BCI/mind-reading-and-control">View on Github<i class="icon brands fa-github"></i></a>
+										<a href="/pdf/P9_Paper.pdf" download>Download PDF</a>
 								</span>
 							</div>
 						</header>
@@ -39,32 +39,34 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h2 class="major">Data Augmentation Methods for Indoor Localization using RSSI Fingerprinting</h2>
+									<h2 class="major">Automatic Label Creation of MRCP for Online
+										Control of a Robotic Soft Glove</h2>
 
-									<p><span class="image right"><img src="images/line_plot-1.png"  /></span>	</p>
+									<p><span class="image right"><img src="images/perfect_centering.png"  /></span>	</p>
 									<p>
 									<h1>Abstract</h1>	
-									In this paper, we explore indoor localization data.
-We analyze the data in-depth, and we ascertain an imbalance
-between ground truths and labeled sensory data. We propose
-three data augmentation methods specific to WiFi-based RSSI
-fingerprinting that attempt to remedy the imbalance. Through
-our experiments, using established machine learning algorithms,
-we show that in most cases, the augmentation methods decrease
-the mean position error. Our experiments also document to what
-degree the machine learning algorithms used in this study are
-affected by the data’s shortcomings. In the case of augmentation,
-our methods decrease the mean position error by -6.92 - 59%,
-with a mean of 25.97%. We also propose a postprocessing
-technique that utilizes metainformation about the data to improve
-predictions. We apply this technique to our best-performing
-models’ predictions, as well as our worst-performing model’s
-predictions for reference. The postprocessing technique decreases
-the mean position error by 0.24 - 18.23%, with a mean of 6.81%.
+									Recent advances in brain-computer interface (BCI)
+systems have assisted in the neurorehabilitation of physically
+disabled patients to regain motor skills in semi-paralyzed body
+parts. Movement-related cortical potentials (MRCPs) are appealing in the BCI field as they occur naturally before movement
+in electroencephalography (EEG) data and capture movement
+intention. However, collecting and labeling the MRCPs is cumbersome and requires domain knowledge. We propose an automatic
+labeling technique that improves the accuracy of a selection
+of classifiers by up to 15% in offline experiments. To achieve
+the performance increase, we identify movement onsets found in
+electromyography (EMG) data, which is collected simultaneously
+with the EEG data, and use these as a guide to find the peak
+negativity that is a key characteristic of MRCP. We also simulate
+an online environment to test the feasibility of our proposed
+labeling technique, and our best model detects 11 out of 15
+MRCPs with an 8.3% false positive rate and a mean delay of
+0.26 s
 										</p>
 
 									<h3 class="major">My Contributions</h3>
-									<p>The project was a collaboration between 5 people, therefore, I have decided to outline some features I worked on. I developed the methods used for approximation utilised in the paper. I was in charge of conducting many of the experiments and creating a testbed with multiple models to test our hypothesis. In part of performing our test I built the LSTM, NN and LGBM models used in the results of the paper. 
+									<p>The project was a collaboration between 3 people, therefore, I have decided to outline some features I worked on. I was tasked with developing the online simulation that was used during all evaluations of the project. I also developed the algorithm that was used for approximating the location of the MRCP negative peak.
+
+									<p> </p>
 
 								</div>
 							</div>

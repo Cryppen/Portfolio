@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Data Augmentation Methods for Indoor Localization using RSSI Fingerprinting</title>
+		<title></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,11 +26,11 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Data Augmentation Methods</h2>
+								<h2>Online EEG Classification</h2>
 								<p style="text-align:left;">
 									<span style="float:right;">
-										<a href="https://github.com/sw808e21/indoor-location-navigation">View on Github<i class="icon brands fa-github"></i></a>
-										<a href="/pdf/P8.pdf" download>Download PDF</a>
+										<a href="https://github.com/P9-MI-BCI/mind-reading-and-control">View on Github<i class="icon brands fa-github"></i></a>
+										<a href="/pdf/P10_Paper.pdf" download>Download PDF</a>
 								</span>
 							</div>
 						</header>
@@ -39,28 +39,38 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h2 class="major">Data Augmentation Methods for Indoor Localization using RSSI Fingerprinting</h2>
+									<h2 class="major">Online Classification of Movement Intention:
+										An end-to-end EEG-based BCI Pipeline</h2>
 
-									<p><span class="image right"><img src="images/line_plot-1.png"  /></span>	</p>
+									<p><span class="image right"><img src="images/experimental_setup.png"  /></span>	</p>
 									<p>
 									<h1>Abstract</h1>	
-									In this paper, we explore indoor localization data.
-We analyze the data in-depth, and we ascertain an imbalance
-between ground truths and labeled sensory data. We propose
-three data augmentation methods specific to WiFi-based RSSI
-fingerprinting that attempt to remedy the imbalance. Through
-our experiments, using established machine learning algorithms,
-we show that in most cases, the augmentation methods decrease
-the mean position error. Our experiments also document to what
-degree the machine learning algorithms used in this study are
-affected by the data’s shortcomings. In the case of augmentation,
-our methods decrease the mean position error by -6.92 - 59%,
-with a mean of 25.97%. We also propose a postprocessing
-technique that utilizes metainformation about the data to improve
-predictions. We apply this technique to our best-performing
-models’ predictions, as well as our worst-performing model’s
-predictions for reference. The postprocessing technique decreases
-the mean position error by 0.24 - 18.23%, with a mean of 6.81%.
+									Brain-computer interfaces (BCIs) based on electroencephalography (EEG) allow users to control external instruments with brain signals and can be used to aid in the
+rehabilitation of patients with loss of motor function. An online
+application of such a system requires a robust classifier, but only
+few studies focus on evaluating BCI systems for online use. This
+paper proposes an end-to-end BCI pipeline for online application,
+which encompasses extensive preprocessing and automatic labeling of EEG signals and either a state-of-the-art deep-learning
+feature extraction method and classifier or a gradient-based
+classifier. An online simulation suite is applied to evaluate the
+system’s performance in an online setting. We collect 220 traces,
+each consisting of 20 self-paced motor task executions, from
+10 subjects for use in evaluations. We construct the pipeline
+to make the process as hands-off as possible. The pipeline
+automatically labels training data for the classifiers by crossreferencing EEG and electromyography (EMG) data recorded
+simultaneously. Our automatic labeling method shows that it can
+contend well with noisy data compared to an earlier method. The
+pipeline includes a ViTransformer deep-learning classifier and
+XGBoost, a gradient-based classifier. We evaluate the classifiers
+online by simulating the classifiers’ rate to receive input data. Our
+experiments show that a well-performing offline classifier does
+not necessarily translate to a well-performing online classifier.
+From online simulation experiments, XGBoost achieves the best
+results where it predicts 66.7% of the movements and achieves an
+81.5% ± 4.2 precision, a 0.45 s ± 0.31 mean prediction latency,
+and a 2.33 s ± 1.20 mean prediction latency false positives on a
+single subject.
+
 										</p>
 
 									<h3 class="major">My Contributions</h3>
